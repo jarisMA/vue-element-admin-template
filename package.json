@@ -1,16 +1,26 @@
 {
-  "name": "homeplan-iiiidea-admin",
+  "name": "vue-element-admin-template",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "serve": "vue-cli-service serve --mode local",
+    "build": "vue-cli-service build --mode production && yarn move",
+    "move": "rm -rf dist && mv current_dist dist",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "ali-oss": "^6.16.0",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "element-ui": "2.15.5",
+    "js-cookie": "^3.0.0",
+    "nprogress": "^0.2.0",
+    "screenfull": "^5.1.0",
+    "style-resources-loader": "^1.4.1",
+    "svg-sprite-loader": "^6.0.9",
     "vue": "^2.6.11",
+    "vue-cli-plugin-style-resources-loader": "^0.1.5",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"
   },
@@ -24,6 +34,7 @@
     "@vue/eslint-config-prettier": "^6.0.0",
     "@vue/test-utils": "^1.0.3",
     "babel-eslint": "^10.1.0",
+    "element-theme-chalk": "^2.15.5",
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-vue": "^6.2.2",
